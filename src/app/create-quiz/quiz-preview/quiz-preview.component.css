@@ -1,0 +1,105 @@
+/* Style for the course container */
+.course-container {
+  width: 50vw;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f7f8;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  float: right;
+}
+
+/* Style for the course title */
+.course-container h2 {
+  color: #1abc9c;
+  font-size: 28px; /* Increase the font size */
+  margin-bottom: 20px;
+}
+
+/* Style for the questions container */
+.questions-container {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 15px; /* Increase the padding */
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the course questions */
+.questions-container h3 {
+  color: #333;
+  font-size: 20px; /* Increase the font size */
+}
+
+/* Style for the question list */
+.questions-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.questions-container li {
+  color: #555;
+  font-size: 18px; /* Increase the font size */
+  margin-bottom: 15px; /* Increase the margin */
+}
+
+/* Style for the close button */
+.close-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 12px; /* Increase the margin */
+  color: red; /* Change the color as needed */
+  font-size: 20px; /* Increase the font size */
+}
+
+/* Style for the edit button */
+.edit-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 12px; /* Increase the margin */
+  color: blue; /* Change the color as needed */
+  font-size: 20px; /* Increase the font size */
+}
+
+/* Style for the question container */
+.question {
+  position: relative;
+}
+
+/* Style for the close button */
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0; /* Position on the right side */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: red; /* Change the color as needed */
+  font-size: 20px; /* Increase the font size */
+}
+
+/* Style for the edit button */
+.edit-button {
+  position: absolute;
+  top: 0;
+  right: 30px; /* Adjust the spacing as needed */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: blue; /* Change the color as needed */
+  font-size: 20px; /* Increase the font size */
+}
+
+/* Style for the paragraph within the question */
+.question p {
+  font-size: 18px; /* Adjust the font size as needed */
+}
+
+/* Style for the answer list */
+.answer-list {
+  margin-top: 10px; /* Add margin between icons and the answer list */
+}
