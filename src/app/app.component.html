@@ -1,4 +1,4 @@
-<app-header></app-header>
-<app-solving-view></app-solving-view>
-<app-home-page *ngIf="false"></app-home-page>
-<app-create-quiz *ngIf="false"></app-create-quiz>
+<app-header (createPage)="navigateToCreatePage($event)"  (homePage)="navigateToHomePage($event)"></app-header>
+<app-solving-view *ngIf="isSolvingPage"></app-solving-view>
+<app-home-page (solvingPage)="navigateToSolvingPage($event)" *ngIf="isHomePage"></app-home-page>
+<app-create-quiz *ngIf="isCreatingPage"></app-create-quiz>

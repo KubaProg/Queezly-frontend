@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { QuizCockpitComponent } from './home-page/course-cockpit/quiz-cockpit.component';
+import { QuizCockpitComponent } from './home-page/quiz-cockpit/quiz-cockpit.component';
 import { QuizListComponent } from './home-page/courses-list/quiz-list.component';
 import { CreateQuizComponent } from './create-quiz/create-quiz.component';
 import { QuizPreviewComponent } from './create-quiz/quiz-preview/quiz-preview.component';

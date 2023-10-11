@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-home-page',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent {
+
+  @Output('solvingPage') chosenSolvingPage = new EventEmitter<Boolean>();
+
+  navigateToSolvingView(isSolvingView: Boolean) {
+    this.chosenSolvingPage.emit(isSolvingView)
+  }
 
 }

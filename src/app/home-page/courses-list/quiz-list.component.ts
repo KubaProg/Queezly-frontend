@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-quiz-list',
@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class QuizListComponent {
 
+
+
+  @Output('solvingPage') chosenSolvingPage = new EventEmitter<Boolean>();
+
+  navigateToSolvingView(isSolvingView: Boolean) {
+    this.chosenSolvingPage.emit(isSolvingView)
+  }
 }

@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CreateQuizComponent {
 
+  isAddQuestion: Boolean = false;
+  isCreateQuizForm: Boolean = true;
+
 }

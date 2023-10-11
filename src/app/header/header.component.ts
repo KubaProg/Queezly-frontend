@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  @Output('createPage') chosenCreatePage = new EventEmitter<Boolean>();
+  @Output('homePage') chosenHomePage = new EventEmitter<Boolean>();
+
+  navigateToCreatePage(isCreateSectionClicked: Boolean){
+    this.chosenCreatePage.emit(isCreateSectionClicked)
+  }
+
+  navigateToHomePage(isHomePageClicked: boolean) {
+    this.chosenHomePage.emit(isHomePageClicked)
+  }
 }
