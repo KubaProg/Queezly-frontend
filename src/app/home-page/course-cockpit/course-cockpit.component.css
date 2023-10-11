@@ -1,19 +1,13 @@
-/* Style for the form container */
 .form-style-5 {
-  width: 50vw; /* Set the width to 50vw (50% of the viewport width) */
-  position: fixed; /* Position it as fixed */
-  left: 0; /* Stick it to the left side */
-  top: 0; /* Optional: Stick it to the top */
-  bottom: 0; /* Optional: Stick it to the bottom */
+  width: 50vw;
+  margin: 20px auto;
   padding: 20px;
   background: #f4f7f8;
   border-radius: 8px;
   font-family: Arial, sans-serif;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  overflow-y: auto; /* Add vertical scrolling if needed */
+  overflow-y: auto;
 }
-
-/* Rest of your existing styles for form elements */
 
 .form-style-5 fieldset{
   border: none;

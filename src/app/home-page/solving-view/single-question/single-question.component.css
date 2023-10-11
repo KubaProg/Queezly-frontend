@@ -1,0 +1,32 @@
+.question-container {
+  width: 100%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Add space between questions */
+}
+
+.badge {
+  background-color: #17a2b8; /* Customize badge background color */
+  color: #fff; /* Set badge text color */
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.question-text {
+  font-weight: bold;
+}
+
+.options {
+  margin-top: 20px;
+}
+
+.option {
+  margin-bottom: 10px;
+}
+
+/* Add additional styling as needed */

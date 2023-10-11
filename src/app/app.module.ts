@@ -10,6 +10,8 @@ import { CreateQuizComponent } from './create-quiz/create-quiz.component';
 import { QuizPreviewComponent } from './create-quiz/quiz-preview/quiz-preview.component';
 import { CreateQuizForm } from './create-quiz/createQuiz-form/createQuiz-form';
 import { AddQuestionComponent } from './create-quiz/add-question/add-question.component';
+import { SolvingViewComponent } from './home-page/solving-view/solving-view.component';
+import { SingleQuestionComponent } from './home-page/solving-view/single-question/single-question.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { AddQuestionComponent } from './create-quiz/add-question/add-question.co
     CreateQuizComponent,
     QuizPreviewComponent,
     CreateQuizForm,
-    AddQuestionComponent
+    AddQuestionComponent,
+    SolvingViewComponent,
+    SingleQuestionComponent
   ],
   imports: [
     BrowserModule
