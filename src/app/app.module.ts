@@ -4,28 +4,30 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { CourseCockpitComponent } from './home-page/course-cockpit/course-cockpit.component';
-import { CoursesListComponent } from './home-page/courses-list/courses-list.component';
+import { QuizCockpitComponent } from './home-page/course-cockpit/quiz-cockpit.component';
+import { QuizListComponent } from './home-page/courses-list/quiz-list.component';
 import { CreateQuizComponent } from './create-quiz/create-quiz.component';
 import { QuizPreviewComponent } from './create-quiz/quiz-preview/quiz-preview.component';
 import { CreateQuizForm } from './create-quiz/createQuiz-form/createQuiz-form';
 import { AddQuestionComponent } from './create-quiz/add-question/add-question.component';
 import { SolvingViewComponent } from './home-page/solving-view/solving-view.component';
 import { SingleQuestionComponent } from './home-page/solving-view/single-question/single-question.component';
+import { QuizTileComponent } from './home-page/courses-list/./quiz-tile/quiz-tile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomePageComponent,
-    CourseCockpitComponent,
-    CoursesListComponent,
+    QuizCockpitComponent,
+    QuizListComponent,
     CreateQuizComponent,
     QuizPreviewComponent,
     CreateQuizForm,
     AddQuestionComponent,
     SolvingViewComponent,
-    SingleQuestionComponent
+    SingleQuestionComponent,
+    QuizTileComponent
   ],
   imports: [
     BrowserModule
