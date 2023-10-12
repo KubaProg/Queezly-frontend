@@ -1,3 +1,5 @@
-<div class="grid-container">
-  <app-quiz-tile (solvingPage)="navigateToSolvingView($event)"></app-quiz-tile>
+<div class="quiz-list">
+  <div class="quiz-tile" *ngFor="let quiz of quizzes" >
+    <app-quiz-tile [quiz]="quiz" (solvingPage)="navigateToSolvingView($event)"></app-quiz-tile>
+  </div>
 </div>

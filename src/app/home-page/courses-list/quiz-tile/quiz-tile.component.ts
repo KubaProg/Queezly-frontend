@@ -1,4 +1,5 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Quiz} from "../../../shared/Quiz.model";
 
 @Component({
   selector: 'app-quiz-tile',
@@ -8,6 +9,7 @@ import {Component, EventEmitter, Output} from '@angular/core';
 export class QuizTileComponent {
 
   @Output('solvingPage') chosenSolvingPage = new EventEmitter<Boolean>();
+  @Input('quiz') quiz?: Quiz;
 
   navigateToSolvingView(isSolvingView: boolean) {
     this.chosenSolvingPage.emit(isSolvingView)

@@ -1,10 +1,10 @@
 <div class="quiz-tile">
   <div class="quiz-header">
-    <h2>Quiz Title</h2>
+    <h2>{{quiz.name}}</h2>
   </div>
   <div class="quiz-details">
-    <p>Questions: 10</p>
-    <p>Duration: 30 minutes</p>
+    <p>Questions: {{quiz.questions.length}}</p>
+    <p>{{quiz.category}}</p>
   </div>
   <button (click)="navigateToSolvingView(true)" type="button"  class="start-quiz-button">Start Quiz</button>
 </div>
