@@ -11,4 +11,9 @@ export class SingleQuestionComponent {
   @Input() question: QuestionDto;
   @Input() counter: number;
 
+  saveSelectedValue(){
+
+  }
+
+
 }

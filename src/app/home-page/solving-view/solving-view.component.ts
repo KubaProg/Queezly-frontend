@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ApiService} from "../../api.service";
 import {QuestionDto} from "../../shared/QuestionDto.model";
 import {SolvingService} from "../../solving.service";
+import {filter} from "rxjs";
 
 @Component({
   selector: 'app-solving-view',
@@ -17,6 +18,10 @@ export class SolvingViewComponent implements OnInit{
   counter : number = 1;
   currentQuestion: QuestionDto;
   finished: boolean = false;
+  userAnswerIds: number[];
+  selectedAnswerId: number; // Define a property to store the selected answer's answerId
+  points: number = 0;
+
 
   ngOnInit(): void {
     this.chosenQuizId = this.solvingService.chosenQuizId;
@@ -42,8 +47,16 @@ export class SolvingViewComponent implements OnInit{
     this.counter++;
 
     this.currentQuestion = this.questions.at(this.counter-1);
+
+    this.addUserAnswer(this.selectedAnswerId);
   }
 
+  addUserAnswer(answerId: number){
+    this.userAnswerIds.push();
+  }
 
+  countResult(){
+
+  }
 
 }

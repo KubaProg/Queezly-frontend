@@ -15,6 +15,7 @@ import { SingleQuestionComponent } from './home-page/solving-view/single-questio
 import { QuizTileComponent } from './home-page/courses-list/./quiz-tile/quiz-tile.component';
 import {HttpClientModule} from "@angular/common/http";
 import { FinishComponent } from './home-page/solving-view/finish/finish.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FinishComponent } from './home-page/solving-view/finish/finish.componen
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

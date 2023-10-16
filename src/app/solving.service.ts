@@ -7,16 +7,8 @@ import {ApiService} from "./api.service";
 export class SolvingService {
 
   chosenQuizId: number;
-  currentQuestionNumber: number;
 
   constructor(private apiService: ApiService) { }
-
-  // provideQuizInfo(){
-  //   this.apiService.getQuizById(quizId).subscribe((quiz) =>{
-  //       this.quiz = quiz;
-  //     }
-  //   )
-  // }
 
 
 }

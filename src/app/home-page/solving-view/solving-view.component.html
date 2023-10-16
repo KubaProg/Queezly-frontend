@@ -3,9 +3,23 @@
 </div>
 
 <div class="quiz-container" *ngIf="!finished">
-  <app-single-question [counter]="counter" [question] = "currentQuestion"></app-single-question>  <div class="button-container">
-<!--    <button type="button" (click)="changeToPrevious()" class="previous-button">Previous</button>-->
+  <div class="question-container">
+    <div class="badge badge-info">Question {{counter}}.</div>
+    <h2><span class="question-text">{{ currentQuestion.content }}</span></h2>
+    <div class="row text-left options">
+      <div class="col-md-6" *ngFor="let answer of currentQuestion.answers">
+        <div class="option">
+          <label for="option{{ answer.id }}">
+            <input id="option{{ answer.id }}" type="radio" name="answer"
+                   [value]="answer.id"
+                  [(ngModel)]="selectedAnswerId" />
+            {{ answer.content }}
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <button type="button" (click)="changeToNext()" class="next-button">Next</button>
   </div>
-</div>
 
