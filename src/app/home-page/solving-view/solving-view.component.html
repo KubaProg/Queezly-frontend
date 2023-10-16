@@ -1,8 +1,11 @@
-<div class="quiz-container">
-  <app-single-question></app-single-question>
-  <div class="button-container">
-    <button class="previous-button">Previous</button>
-    <button class="next-button">Next</button>
+<div class="finish" *ngIf="finished">
+  <app-finish></app-finish>
+</div>
+
+<div class="quiz-container" *ngIf="!finished">
+  <app-single-question [counter]="counter" [question] = "currentQuestion"></app-single-question>  <div class="button-container">
+<!--    <button type="button" (click)="changeToPrevious()" class="previous-button">Previous</button>-->
+    <button type="button" (click)="changeToNext()" class="next-button">Next</button>
   </div>
 </div>
 

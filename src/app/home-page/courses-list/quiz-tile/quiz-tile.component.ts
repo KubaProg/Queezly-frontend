@@ -1,5 +1,8 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Quiz} from "../../../shared/Quiz.model";
+import {QuizInfo} from "../../../shared/QuizInfo.model";
+import {ApiService} from "../../../api.service";
+import {SolvingService} from "../../../solving.service";
 
 @Component({
   selector: 'app-quiz-tile',
@@ -8,10 +11,13 @@ import {Quiz} from "../../../shared/Quiz.model";
 })
 export class QuizTileComponent {
 
-  @Output('solvingPage') chosenSolvingPage = new EventEmitter<Boolean>();
-  @Input('quiz') quiz?: Quiz;
+  constructor(private solvingService: SolvingService) {}
 
-  navigateToSolvingView(isSolvingView: boolean) {
+  @Output('solvingPage') chosenSolvingPage = new EventEmitter<Boolean>();
+  @Input('quiz') quiz?: QuizInfo;
+
+  navigateToSolvingView(isSolvingView: boolean, quizId: number) {
+    this.solvingService.chosenQuizId = quizId;
     this.chosenSolvingPage.emit(isSolvingView)
   }
 }

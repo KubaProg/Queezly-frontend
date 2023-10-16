@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {QuestionDto} from "../../../shared/QuestionDto.model";
 
 @Component({
   selector: 'app-single-question',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./single-question.component.css']
 })
 export class SingleQuestionComponent {
+
+  @Input() question: QuestionDto;
+  @Input() counter: number;
 
 }

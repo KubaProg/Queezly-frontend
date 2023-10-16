@@ -16,7 +16,8 @@
 }
 
 .previous-button,
-.next-button {
+.next-button,
+.end-button{
   padding: 20px 40px;
   background-color: #17a2b8;
   color: #fff;
@@ -29,4 +30,11 @@
 .previous-button:hover,
 .next-button:hover {
   background-color: #126e8f; /* Change button background color on hover */
+}
+
+.finish {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  height: 100vh; /* Full viewport height */
 }

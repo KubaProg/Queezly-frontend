@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Output} from '@angular/core';
+import {SolvingService} from "../solving.service";
 
 @Component({
   selector: 'app-home-page',
@@ -6,6 +7,8 @@ import {Component, EventEmitter, Output} from '@angular/core';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent {
+
+  constructor(private solvingService: SolvingService) {}
 
   @Output('solvingPage') chosenSolvingPage = new EventEmitter<Boolean>();
 

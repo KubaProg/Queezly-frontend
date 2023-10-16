@@ -13,6 +13,8 @@ import { AddQuestionComponent } from './create-quiz/add-question/add-question.co
 import { SolvingViewComponent } from './home-page/solving-view/solving-view.component';
 import { SingleQuestionComponent } from './home-page/solving-view/single-question/single-question.component';
 import { QuizTileComponent } from './home-page/courses-list/./quiz-tile/quiz-tile.component';
+import {HttpClientModule} from "@angular/common/http";
+import { FinishComponent } from './home-page/solving-view/finish/finish.component';
 
 @NgModule({
   declarations: [
@@ -27,10 +29,12 @@ import { QuizTileComponent } from './home-page/courses-list/./quiz-tile/quiz-til
     AddQuestionComponent,
     SolvingViewComponent,
     SingleQuestionComponent,
-    QuizTileComponent
+    QuizTileComponent,
+    FinishComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
