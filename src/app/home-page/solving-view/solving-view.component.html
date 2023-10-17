@@ -11,8 +11,8 @@
         <div class="option">
           <label for="option{{ answer.id }}">
             <input id="option{{ answer.id }}" type="radio" name="answer"
-                   [value]="answer.id"
-                  [(ngModel)]="selectedAnswerId" />
+                   [value]="answer.correct"
+                  [(ngModel)]="selectedAnswer" />
             {{ answer.content }}
           </label>
         </div>

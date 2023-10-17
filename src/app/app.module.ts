@@ -11,11 +11,16 @@ import { QuizPreviewComponent } from './create-quiz/quiz-preview/quiz-preview.co
 import { CreateQuizForm } from './create-quiz/createQuiz-form/createQuiz-form';
 import { AddQuestionComponent } from './create-quiz/add-question/add-question.component';
 import { SolvingViewComponent } from './home-page/solving-view/solving-view.component';
-import { SingleQuestionComponent } from './home-page/solving-view/single-question/single-question.component';
 import { QuizTileComponent } from './home-page/courses-list/./quiz-tile/quiz-tile.component';
 import {HttpClientModule} from "@angular/common/http";
 import { FinishComponent } from './home-page/solving-view/finish/finish.component';
 import {FormsModule} from "@angular/forms";
+import {RouterModule, Routes} from "@angular/router";
+
+const appRoutes: Routes = [
+  {path: '', component:HomePageComponent},
+  // {path: 'users', component:UsersComponent},
+];
 
 @NgModule({
   declarations: [
@@ -29,14 +34,15 @@ import {FormsModule} from "@angular/forms";
     CreateQuizForm,
     AddQuestionComponent,
     SolvingViewComponent,
-    SingleQuestionComponent,
     QuizTileComponent,
-    FinishComponent
+    FinishComponent,
+    QuizListComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

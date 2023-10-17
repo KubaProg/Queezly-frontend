@@ -10,14 +10,19 @@ import {QuizInfo} from "../../shared/QuizInfo.model";
 export class QuizListComponent implements OnInit{
 
 quizzes: QuizInfo[];
+
+  constructor(private apiService: ApiService) {}
+
   ngOnInit() {
     this.apiService.getQuizzes().subscribe((data) => {
       this.quizzes = data;
     });
-    this.apiService.getQuizById(1).subscribe();
-  }
 
-  constructor(private apiService: ApiService) {}
+    this.apiService.updatedQuizzes.subscribe((response: QuizInfo[]) => {
+      this.quizzes = response;
+    })
+
+  }
 
   @Output('solvingPage') chosenSolvingPage = new EventEmitter<Boolean>();
 

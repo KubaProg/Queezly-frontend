@@ -19,9 +19,7 @@ export class SolvingViewComponent implements OnInit{
   currentQuestion: QuestionDto;
   finished: boolean = false;
   userAnswerIds: number[];
-  selectedAnswerId: number; // Define a property to store the selected answer's answerId
-  points: number = 0;
-
+  selectedAnswer: boolean;
 
   ngOnInit(): void {
     this.chosenQuizId = this.solvingService.chosenQuizId;
@@ -31,32 +29,25 @@ export class SolvingViewComponent implements OnInit{
     })
   }
 
-  changeToPrevious(){
-    if(this.counter!=1){
-      this.counter--;
-    }
-    this.currentQuestion = this.questions.at(this.counter-1);
-  }
+  // changeToPrevious(){
+  //   if(this.counter!=1){
+  //     this.counter--;
+  //   }
+  //   this.currentQuestion = this.questions.at(this.counter-1);
+  // }
 
   changeToNext(){
 
+    this.solvingService.addUserAnswer(this.selectedAnswer);
+
     if(this.counter === this.questions.length){
+      this.solvingService.calculateResult(this.questions.length)
       this.finished = true;
     }
 
     this.counter++;
 
     this.currentQuestion = this.questions.at(this.counter-1);
-
-    this.addUserAnswer(this.selectedAnswerId);
-  }
-
-  addUserAnswer(answerId: number){
-    this.userAnswerIds.push();
-  }
-
-  countResult(){
-
   }
 
 }
