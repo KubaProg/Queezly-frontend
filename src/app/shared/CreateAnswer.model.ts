@@ -1,4 +1,6 @@
 export class CreateAnswer{
-  content : string;
-  correct :boolean;
+  constructor(
+  public content : string,
+  public correct :boolean) {}
+
 }

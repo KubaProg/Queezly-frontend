@@ -1,6 +1,9 @@
 import {CreateAnswer} from "./CreateAnswer.model";
 
 export class CreateQuestion{
-  content: string;
-  answers: CreateAnswer[];
+
+  constructor(
+    public content: string,
+    public answers: CreateAnswer[],
+  ) {}
 }

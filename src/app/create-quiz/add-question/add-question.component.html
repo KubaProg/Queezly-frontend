@@ -1,19 +1,24 @@
 <div class="form-style-5">
   <form>
 
-    <input type="text" name="answerA" placeholder="Answer A">
-    <input type="text" name="field1" placeholder="Answer B">
-    <input type="text" name="field1" placeholder="Answer C">
-    <input type="text" name="field1" placeholder="Answer D">
+    <label for="question">Question: </label>
+    <input type="text"  id="question" name="question" placeholder="Question" [(ngModel)]="question">
+    <input type="text" name="answerA" placeholder="Answer A " [(ngModel)]="answerA">
+    <input type="text" name="answerB" placeholder="Answer B" [(ngModel)]="answerB">
+    <input type="text" name="answerC" placeholder="Answer C" [(ngModel)]="answerC">
+    <input type="text" name="answerD" placeholder="Answer D" [(ngModel)]="answerD">
 
-      <label for="answer">Level:</label>
-      <select id="answer" name="answer">
+      <label for="answer">Correct answer:</label>
+      <select id="answer" name="answer" [(ngModel)]="correctAnswer">
         <option value="A">A</option>
         <option value="B">B</option>
         <option value="C">C</option>
         <option value="D">D</option>
       </select>
 
-    <button type="button">Add</button>
+    <button (click)="onAddQuestion(question,answerA,answerB,answerC,answerD,correctAnswer)" type="button">Add</button>
   </form>
+
+  <button type="button" (click)="createQuiz()">CREATE QUIZ</button>
+
 </div>
