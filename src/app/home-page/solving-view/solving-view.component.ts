@@ -3,6 +3,7 @@ import {ApiService} from "../../api.service";
 import {QuestionDto} from "../../shared/QuestionDto.model";
 import {SolvingService} from "../../solving.service";
 import {filter} from "rxjs";
+import {AnswerDto} from "../../shared/AnswerDto.model";
 
 @Component({
   selector: 'app-solving-view',
@@ -19,7 +20,7 @@ export class SolvingViewComponent implements OnInit{
   currentQuestion: QuestionDto;
   finished: boolean = false;
   userAnswerIds: number[];
-  selectedAnswer: boolean;
+  selectedAnswer: AnswerDto;
 
   ngOnInit(): void {
     this.chosenQuizId = this.solvingService.chosenQuizId;
@@ -38,7 +39,7 @@ export class SolvingViewComponent implements OnInit{
 
   changeToNext(){
 
-    this.solvingService.addUserAnswer(this.selectedAnswer);
+    this.solvingService.addUserAnswer(this.selectedAnswer.correct);
 
     if(this.counter === this.questions.length){
       this.solvingService.calculateResult(this.questions.length)

@@ -5,5 +5,6 @@ export class CreateQuestion{
   constructor(
     public content: string,
     public answers: CreateAnswer[],
+    public correctLetter: string
   ) {}
 }

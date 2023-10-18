@@ -14,8 +14,10 @@ export class CreatingService {
   quiz: CreateQuiz;
 
   isAddQuestion = new EventEmitter<boolean>();
+  correctAnswer = new EventEmitter<string>();
   isCreateQuizForm = new EventEmitter<boolean>();
   quizName = new EventEmitter<string>();
+  updatableQuestions = new EventEmitter<CreateQuestion[]>();
 
 
   constructor() { }

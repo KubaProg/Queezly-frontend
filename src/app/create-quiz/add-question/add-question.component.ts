@@ -33,10 +33,12 @@ export class AddQuestionComponent {
     this.answers.forEach(((answer) => {
       if(answer.content===this.chosenCorrect){
         answer.correct = true;
+        this.creatingService.correctAnswer.emit(answer.content)
       }
     }))
 
-    this.creatingService.questions.push(new CreateQuestion(question,this.answers))
+    this.creatingService.questions.push(new CreateQuestion(question,this.answers,this.chosenCorrect))
+    this.creatingService.updatableQuestions.emit(this.creatingService.questions);
 
     this.clear();
   }
@@ -69,5 +71,6 @@ export class AddQuestionComponent {
   createQuiz() {
     this.creatingService.quiz.questions = this.creatingService.questions;
     this.apiService.createQuiz(this.creatingService.quiz).subscribe();
+    window.location.reload(); // Reload the application
   }
 }

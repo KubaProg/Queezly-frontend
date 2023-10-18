@@ -3,35 +3,16 @@
 
   <div class="questions-container">
     <h3>Quiz questions</h3>
-    <ul>
+    <ul *ngFor="let question of questions; let i = index">
       <!-- Question 1 -->
       <li>
         <div class="question">
-          <p class="question-text">Question 1: What is the capital of France?</p>
-          <ul class="answer-list">
-            <li>A. Paris</li>
-            <li>B. London</li>
-            <li>C. Berlin</li>
-            <li>D. Madrid</li>
+          <p class="question-text">Question {{i+1}}: {{question.content}}</p>
+          <ul class="answer-list" *ngFor="let answer of question.answers; let x = index">
+            <li>Pyt. {{x+1}} : {{answer.content}}</li>
           </ul>
-          <p class="correct-answer">Correct Answer: A</p>
-          <button class="close-button"><i class="fas fa-times"></i></button>
-          <button class="edit-button"><i class="fas fa-edit"></i></button>
-        </div>
-      </li>
-
-      <li>
-        <div class="question">
-          <p class="question-text">Question 2: Who is Sebastian Enrique Alvarez Palucki?</p>
-          <ul class="answer-list">
-            <li>A. Paris</li>
-            <li>B. London</li>
-            <li>C. Berlin</li>
-            <li>D. GIGA CHAD</li>
-          </ul>
-          <p class="correct-answer">Correct Answer: A</p>
-          <button class="close-button"><i class="fas fa-times"></i></button>
-          <button class="edit-button"><i class="fas fa-edit"></i></button>
+          <p class="correct-answer">Correct Answer: {{question.correctLetter}} </p>
+          <button class="close-button" (click)="deleteQuestion(question.content)"><i class="fas fa-times"></i></button>
         </div>
       </li>
 

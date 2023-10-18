@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CreatingService} from "../creating.service";
+import {QuestionDto} from "../../shared/QuestionDto.model";
+import {CreateQuestion} from "../../shared/CreateQuestion.model";
 
 @Component({
   selector: 'app-quiz-preview',
@@ -8,6 +10,8 @@ import {CreatingService} from "../creating.service";
 })
 export class QuizPreviewComponent implements OnInit{
   quizTitle: string;
+  questions: CreateQuestion[] = []
+  correctAnswer: string;
 
   constructor(private creatingService: CreatingService) {}
 
@@ -15,6 +19,24 @@ export class QuizPreviewComponent implements OnInit{
     this.creatingService.quizName.subscribe((name) => {
       this.quizTitle = name;
     })
+
+    this.creatingService.updatableQuestions.subscribe((questions) => {
+      this.questions = questions;
+    })
+
+    this.creatingService.correctAnswer.subscribe((answer: string) => {
+      this.correctAnswer = answer;
+    })
+  }
+
+  protected readonly indexedDB = indexedDB;
+
+  deleteQuestion(content: string) {
+    const indexToDelete = this.questions.findIndex((question) => question.content === content);
+    if (indexToDelete !== -1) {
+      this.questions.splice(indexToDelete, 1);
+    }
+    this.creatingService.questions = this.questions;
   }
 
 }

@@ -3,6 +3,7 @@
 </div>
 
 <div class="quiz-container" *ngIf="!finished">
+
   <div class="question-container">
     <div class="badge badge-info">Question {{counter}}.</div>
     <h2><span class="question-text">{{ currentQuestion.content }}</span></h2>
@@ -11,7 +12,7 @@
         <div class="option">
           <label for="option{{ answer.id }}">
             <input id="option{{ answer.id }}" type="radio" name="answer"
-                   [value]="answer.correct"
+                   [value]="answer"
                   [(ngModel)]="selectedAnswer" />
             {{ answer.content }}
           </label>
