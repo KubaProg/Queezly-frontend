@@ -24,7 +24,7 @@
 }
 
 .start-quiz-button {
-  background-color: #0074a4;
+  background: #109177;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -32,8 +32,9 @@
   cursor: pointer;
   font-weight: bold;
   margin-top: 10px;
+  transition: all 0.3s;
 }
 
 .start-quiz-button:hover {
-  background-color: #00567d;
+  background: rgba(50, 120, 50, 0.99);
 }

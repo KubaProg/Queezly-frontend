@@ -1,13 +1,16 @@
 .quiz-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three columns per row */
-  gap: 20px; /* Adjust the gap between columns as needed */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 50px;
 }
 
 .quiz-tile {
   background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  border-radius: 5px;
   font-size: 16px; /* Adjust the font size as needed */
   text-align: center;
 }

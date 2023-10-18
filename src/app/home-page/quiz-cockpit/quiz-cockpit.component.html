@@ -1,25 +1,25 @@
 <div class="form-style-5">
+  <legend>Wyszukaj Quiz</legend>
   <form>
     <fieldset>
-      <legend>Search course</legend>
-
-      <label for="category">Category:</label>
+      <label for="category">Kategoria:</label>
       <select id="category" name="category" [(ngModel)]="selectedCategory">
+        <option value="">-- Dowolna --</option>
         <option value="Programowanie">Programowanie</option>
         <option value="Historia">Historia</option>
         <option value="Matematyka">Matematyka</option>
       </select>
 
-      <label for="level">Level:</label>
+      <label for="level">Trudność:</label>
       <select id="level" name="field4" [(ngModel)]="selectedLevel">
-        <option value="EASY">Easy</option>
-        <option value="MEDIUM">Medium</option>
-        <option value="HARD">Hard</option>
+        <option value="">-- Dowolny --</option>
+        <option value="EASY">Łatwy</option>
+        <option value="MEDIUM">Średni</option>
+        <option value="HARD">Trudny</option>
       </select>
+      <input type="text" name="field1" placeholder="Nazwa quizu" [(ngModel)]="quizName">
     </fieldset>
 
-    <input type="text" name="field1" placeholder="Quiz name" [(ngModel)]="quizName">
-
-    <button type="button" (click)="onSearchQuizes(selectedCategory, selectedLevel, quizName)">Search</button>
+    <button type="button" (click)="onSearchQuizes(selectedCategory, selectedLevel, quizName)">Szukaj</button>
   </form>
 </div>
