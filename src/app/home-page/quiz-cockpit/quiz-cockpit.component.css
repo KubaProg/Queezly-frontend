@@ -61,7 +61,7 @@
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  color:#8a97a0;
+  color: #333;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 15px;
   -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
@@ -78,11 +78,6 @@
 .form-style-5 textarea:focus,
 .form-style-5 select:focus{
   background: #d2d9dd;
-}
-.form-style-5 select{
-  /* -webkit-appearance: menulist-button;
-  height:35px; */
-  color: #333;
 }
 .form-style-5 .number {
   background: #109177;
@@ -107,15 +102,14 @@
   width: 100%;
   padding: 20px 40px 20px 40px;
   border: none;
+  border-radius: 5px;
   margin: 20px 0px 20px 0px;
   color: #FFF;
   background: #109177;
-  /* background: rgba(50, 120, 50, 0.99); */
   font-size: 18px;
   text-align: center;
   font-style: normal;
-
-  cursor: pointer; /* Add a pointer cursor on hover */
+  cursor: pointer;
   transition: all 0.3s;
 }
 .form-style-5 button[type="submit"]:hover,

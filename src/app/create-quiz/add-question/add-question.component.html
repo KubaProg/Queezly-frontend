@@ -1,14 +1,13 @@
 <div class="form-style-5">
+  <legend>Pytanie: </legend>
   <form>
+    <input type="text"  id="question" name="question" placeholder="Pytanie" [(ngModel)]="question">
+    <input type="text" name="answerA" placeholder="Odpowiedź A " [(ngModel)]="answerA">
+    <input type="text" name="answerB" placeholder="Odpowiedź B" [(ngModel)]="answerB">
+    <input type="text" name="answerC" placeholder="Odpowiedź C" [(ngModel)]="answerC">
+    <input type="text" name="answerD" placeholder="Odpowiedź D" [(ngModel)]="answerD">
 
-    <label for="question">Question: </label>
-    <input type="text"  id="question" name="question" placeholder="Question" [(ngModel)]="question">
-    <input type="text" name="answerA" placeholder="Answer A " [(ngModel)]="answerA">
-    <input type="text" name="answerB" placeholder="Answer B" [(ngModel)]="answerB">
-    <input type="text" name="answerC" placeholder="Answer C" [(ngModel)]="answerC">
-    <input type="text" name="answerD" placeholder="Answer D" [(ngModel)]="answerD">
-
-      <label for="answer">Correct answer:</label>
+      <label for="answer">Poprawna odpowiedź:</label>
       <select id="answer" name="answer" [(ngModel)]="correctAnswer">
         <option value="A">A</option>
         <option value="B">B</option>
@@ -16,9 +15,8 @@
         <option value="D">D</option>
       </select>
 
-    <button (click)="onAddQuestion(question,answerA,answerB,answerC,answerD,correctAnswer)" type="button">Add</button>
-  </form>
-
-  <button type="button" (click)="createQuiz()">CREATE QUIZ</button>
-
+    
+      <button (click)="onAddQuestion(question,answerA,answerB,answerC,answerD,correctAnswer)" type="button">Dodaj</button>
+      <button type="button" (click)="createQuiz()">Utwórz Quiz</button>
+    </form>
 </div>

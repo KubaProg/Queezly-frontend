@@ -2,7 +2,6 @@
 .course-container {
   width: 40vw;
   margin: 20px auto;
-  padding: 20px;
   background-color: #f4f7f8;
   border-radius: 8px;
   font-family: Arial, sans-serif;
@@ -12,16 +11,19 @@
 
 /* Style for the course title */
 .course-container h2 {
-  color: #1abc9c;
-  font-size: 28px; /* Increase the font size */
-  margin-bottom: 20px;
+  background: #109177;
+  padding: 25px;
+  border-radius: 8px 8px 0 0;
+  margin: 0;
+  color: #fff;
+  font-size: 28px;
 }
 
 /* Style for the questions container */
 .questions-container {
   background-color: #fff;
   border: 1px solid #e0e0e0;
-  padding: 15px; /* Increase the padding */
+  padding: 20px 70px 20px 70px;
   border-radius: 8px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
@@ -45,14 +47,25 @@
   margin-bottom: 15px; /* Increase the margin */
 }
 
+.question-text {
+  background: #17a2b8;
+  padding: 15px;
+  border: 1px solid #19b;
+  border-radius: 2px;
+  margin: 0;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
 /* Style for the close button */
 .close-button {
   background-color: transparent;
+  padding: 15px;
   border: none;
+  margin-left: 12px;
   cursor: pointer;
-  margin-left: 12px; /* Increase the margin */
-  color: red; /* Change the color as needed */
-  font-size: 20px; /* Increase the font size */
+  color: red;
+  font-size: 20px;
 }
 
 /* Style for the edit button */
@@ -67,9 +80,9 @@
 
 /* Style for the question container */
 .question {
+  background: #d2d9dd;
   position: relative;
 }
-
 /* Style for the close button */
 .close-button {
   position: absolute;
@@ -101,5 +114,11 @@
 
 /* Style for the answer list */
 .answer-list {
-  margin-top: 10px; /* Add margin between icons and the answer list */
+  padding: 0 15px 0 15px !important;
+  margin-top: 10px;
 }
+
+.correct-answer {
+  padding: 0 15px 10px 15px !important;
+}
+

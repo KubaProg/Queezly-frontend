@@ -2,16 +2,16 @@
   <h2>{{quizTitle}}</h2>
 
   <div class="questions-container">
-    <h3>Quiz questions</h3>
+    <h3>Pytania quizu</h3>
     <ul *ngFor="let question of questions; let i = index">
       <!-- Question 1 -->
       <li>
         <div class="question">
-          <p class="question-text">Question {{i+1}}: {{question.content}}</p>
+          <p class="question-text">Pytanie {{i+1}}: {{question.content}}</p>
           <ul class="answer-list" *ngFor="let answer of question.answers; let x = index">
             <li>Pyt. {{x+1}} : {{answer.content}}</li>
           </ul>
-          <p class="correct-answer">Correct Answer: {{question.correctLetter}} </p>
+          <p class="correct-answer">Prawidłowa odpowiedź: {{question.correctLetter}} </p>
           <button class="close-button" (click)="deleteQuestion(question.content)"><i class="fas fa-times"></i></button>
         </div>
       </li>

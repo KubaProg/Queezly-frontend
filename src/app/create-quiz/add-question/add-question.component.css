@@ -1,18 +1,30 @@
-.form-style-5{
-  width: 45vw;
-  padding: 10px 20px;
+.form-style-5 {
   background: #f4f7f8;
-  margin: 10px auto;
+  box-sizing: border-box;
+  width: 45vw;
+  min-width: 400px;
+  margin: 20px auto;
   border-radius: 8px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  float: left; /* Float the container to the right */
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
 }
+
+.form-style-5 form {
+  padding: 20px 50px 20px 50px;
+}
+
 .form-style-5 fieldset{
   border: none;
 }
 .form-style-5 legend {
+  background: #17a2b8;
+  padding: 25px;
+  margin: auto;
+  color: white;
+  text-align: center;
   font-size: 1.4em;
-  margin-bottom: 10px;
+  font-weight: 600;
 }
 .form-style-5 label {
   display: block;
@@ -26,23 +38,34 @@
 .form-style-5 input[type="search"],
 .form-style-5 input[type="time"],
 .form-style-5 input[type="url"],
-.form-style-5 textarea,
-.form-style-5 select {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  border: none;
-  border-radius: 4px;
-  font-size: 15px;
-  outline: 0;
-  padding: 10px;
+.form-style-5 textarea {
+  background: #d2d9dd;
+  display: block;
+  box-sizing: border-box;
   width: 100%;
+  outline: 0;
+  padding: 15px 10px 15px 10px;
+  border: none;
+  border-radius: 2px;
+  margin: 15px 0 15px 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 15px;
+}
+.form-style-5 select {
+  width: 100%;
+  outline: 0;
+  padding: 20px 10px 20px 10px;
+  border: none;
+  border-radius: 2px;
+  margin: 0 0 30px;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  background: #e8eeef;
-  color:#8a97a0;
+  color: #333;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 15px;
   -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-  margin: 0 0 30px;
 }
 .form-style-5 input[type="text"]:focus,
 .form-style-5 input[type="date"]:focus,
@@ -56,12 +79,8 @@
 .form-style-5 select:focus{
   background: #d2d9dd;
 }
-.form-style-5 select{
-  -webkit-appearance: menulist-button;
-  height:35px;
-}
 .form-style-5 .number {
-  background: #1abc9c;
+  background: #109177;
   color: #fff;
   height: 30px;
   width: 30px;
@@ -80,19 +99,22 @@
 {
   position: relative;
   display: block;
-  padding: 19px 39px 18px 39px;
+  width: 100%;
+  padding: 20px 40px 20px 40px;
+  border: none;
+  border-radius: 5px;
+  margin: 20px 0px 20px 0px;
   color: #FFF;
-  background: #1abc9c;
+  background: #109177;
   font-size: 18px;
   text-align: center;
   font-style: normal;
-  width: 100%;
-  border-width: 1px 1px 3px;
-  margin: 0 auto 10px;
-  cursor: pointer; /* Add a pointer cursor on hover */
+  cursor: pointer;
+  transition: all 0.3s;
 }
 .form-style-5 button[type="submit"]:hover,
 .form-style-5 button[type="button"]:hover
 {
-  background: #109177;
+  background: #107167;
+  /* background: rgba(35, 90, 35, 0.99); */
 }
