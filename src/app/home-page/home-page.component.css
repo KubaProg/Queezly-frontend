@@ -1,6 +1,9 @@
 * {
   font-family: "Arial", serif;
 }
+body {
+  margin: 0;
+}
 app-course-cockpit, app-courses-list {
   display: block; /* Ensures they are block-level elements (which is usually default) */
   margin-bottom: 20px; /* Add some margin to separate them vertically */
