@@ -1,13 +1,39 @@
 .quiz-container {
+  display: grid;
   font-size: 20px;
   width: 50%; /* Adjust the width as needed */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 100px;
+  margin: 4% auto; /* Center the container horizontally */
   background: #f4f7f8;
   border-radius: 8px;
   font-family: Arial, sans-serif;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px; /* Add space between questions */
+}
+
+.badge {
+  background: #17a2b8;
+  width: 100%;
+  padding: 20px 0;
+  margin: auto;
+  border-radius: 8px 8px 0 0;
+  color: white;
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+.question-container {
+  padding: 40px 80px 0 80px;
+}
+
+.options {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
 }
 
 .button-container {
@@ -18,23 +44,30 @@
 .previous-button,
 .next-button,
 .end-button{
-  padding: 20px 40px;
-  background-color: #17a2b8;
-  color: #fff;
+  background-color: #109177;
+  justify-self: center;
+  box-sizing: content-box;
+  opacity: 0.9;
+  width: 75%;
+  height: 47px;
+  padding: 0 10px 0 10px;
   border: none;
-  border-radius: 4px;
-  margin: 0 10px; /* Add space between the buttons */
+  border-radius: 5px;
+  margin: 40px 0 40px 0;
+  color: #fff;
+  font-size: 15px;
+  font-family: "Arial", serif;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 .previous-button:hover,
 .next-button:hover {
-  background-color: #126e8f; /* Change button background color on hover */
+  background-color: rgba(50, 120, 50, 0.99); /* Change button background color on hover */
 }
 
 .finish {
   display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
-  height: 100vh; /* Full viewport height */
+  align-items: center;
+  justify-content: center;
 }
