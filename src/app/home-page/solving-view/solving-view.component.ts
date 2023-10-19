@@ -49,6 +49,8 @@ export class SolvingViewComponent implements OnInit{
     this.counter++;
 
     this.currentQuestion = this.questions.at(this.counter-1);
+
+    this.selectedAnswer.correct = false;
   }
 
 }

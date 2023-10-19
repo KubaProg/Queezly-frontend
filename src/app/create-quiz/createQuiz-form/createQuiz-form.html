@@ -1,26 +1,26 @@
 <div class="form-style-5">
   <legend>Utwórz quiz</legend>
-  <form>
+  <form #quizForm="ngForm">
     <fieldset>
       <label for="category">Kategoria:</label>
-      <select id="category" name="category" [(ngModel)]="selectedCategory">
+      <select id="category" name="category" [(ngModel)]="selectedCategory" required>
         <option value="Programowanie">Programowanie</option>
         <option value="Historia">Historia</option>
         <option value="Matematyka">Matematyka</option>
       </select>
 
       <label for="level">Trudność:</label>
-      <select id="level" name="field4" [(ngModel)]="selectedLevel">
+      <select id="level" name="level" [(ngModel)]="selectedLevel" required>
         <option value="EASY">Łatwy</option>
         <option value="MEDIUM">Średni</option>
         <option value="HARD">Trudny</option>
       </select>
-      
-    <input type="text" name="description" placeholder="Opis quizu" [(ngModel)]="quizDescription">
 
-    <input type="text" name="title" placeholder="Nazwa quizu" [(ngModel)]="quizName">
+      <input type="text" name="description" placeholder="Opis quizu" [(ngModel)]="quizDescription" required>
+
+      <input type="text" name="title" placeholder="Nazwa quizu" [(ngModel)]="quizName" required>
     </fieldset>
 
-    <button type="button" (click)="onSaveQuiz(selectedCategory, selectedLevel, quizName, quizDescription)">Dodaj pytanie</button>
+    <button type="button" (click)="onSaveQuiz(selectedCategory, selectedLevel, quizName, quizDescription)" [disabled]="!quizForm.valid">Dodaj pytanie</button>
   </form>
 </div>
